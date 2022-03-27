@@ -1,0 +1,9 @@
+The men of the tribe left several years ago to fight in the war 
+against the Fire Nation, leaving the women and children to fend for themselves 
+until they return. Although they are subsisting, there is the lingering threat
+of Fire Nation troops showing up at any time; against which they would be 
+completely defenseless. Luckily, the Fire Nation has little reason to do so;
+the location is very remote and has no military or strategic significance.
+
+Stability: +8
+Danger: -16

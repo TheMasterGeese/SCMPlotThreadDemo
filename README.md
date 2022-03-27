@@ -17,237 +17,64 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About SCMPlotThreadDemo
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This is a demo to demonstrate the concept of using Source Control Management as a way to model plot threads developing in tabletop roleplaying games.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+## Threads
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+The core idea of this system is that a plot is composed of "Threads". These are modelled as git Branches, but for the sake of consistency, they will be referred to as threads. 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+A thread is a collection of connected events, usually pertaining to a specific person, place, object, or other topic. The start of a thread can come either through the actions of the players, or can have been set in motion before the start of an adventue, such as part of a historical event. In the case of the latter, a GM could technically make up events chaining all the way back to the beginning of the universe, but for simplicity's sake, often a particularly major event can be considered the start of its own thread.
 
-Use the `BLANK_README.md` to get started.
+### Developing Threads.
+When something happens that impacts the state of a thread, the thread develops. This can be a result of actions taken by the player, or can be the result of offscreen goings-on.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Threads can develop any number of times, but are NEVER closed. If the players save a village, the village still exists even after they move on to bigger and better things. Further developments could involve the fallout of exactly how they saved the village, or might involve the player's being sent a thank you gift for all that they've done, for example.
 
+In addition, Threads can develop randomly. The chance of doing so greatly decreases as its state becomes more stable, but is NEVER 0. Every so often, a d20 roll is made to see if the Thread develops, and if it does, another D20 roll is made to see how positive or negative this development is.
 
+#### Stability
 
-### Built With
+The roll to see if the thread develops is modified by it's Stability. Stability is a value between -10 and +10, with a -10 being a guarantee that something will happen, but nobody knows what, and a +10 being (practically) a guarantee that nothing unexpected will happen.
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+After rolling a d20 and adding/subtracting the stability modifier, a result of -1 or lower means that the thread develops. If Stability is +10, then on a roll of of 1 on the die, the thread develops. This is the only case in which a 1 guarantees a thread will develop, and otherwise rolls of 1 or 20 have no special effect on whether a thread develops.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+Whether a thread stabilizes or not is independent of its danger, there can be a highly stable thread that balances on a knife's edge between prosperity and ruin, and a highly unstable thread with only good things to come. If the danger of a thread is at a minimum, it might even be better to keep stability low, to cash in on positive developments. And conversely, stabilizing a particularly dangerous threat will, at the very least, mitigate it from getting worse.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+#### Danger
 
+If a thread develops, how it develops is based on its Danger. Like Stability, Danger is a value between -20 and 0, with a -20 meaning that any development will be bad. and 0 meaning that any developments will (probably) be good. Unlike Stability, Danger has four different outcomes: (Note that despite the resemblance, this is not 100% equivalent to Pathfinder 2E's 4 degrees of success, in order to make all 4 outcomes have the same range of results)
 
+* Critical Failure (-11 or lower): Disaster has struck. The Dam has broken and the village wil be flooded within minutes. Timmy fell down the well. The lead actor fell and broke their leg and can't perform in the premiere tonight. Whatever the outcome, this warrants an immediate response, or even more disaster will follow.
+* Failure (-1 to -10): Something worrying has happened. The inspector has found some critical structural weaknesses in the dam. Timmy is missing and nobody has seen him. The lead actor is uncharacteristically late to rehersal. This outcome may or may not have immediate consequences, but if it isn't addressed quickly there's going to be a very real problem on everyone's hands.
+* Success (0-9): Positive progress is being made, or if everything was already going well, the status quo is maintained. We've hired expert masons to fill in the cracks in the dam. Someone heard a child crying down the well and saw Timmy at the bottom. The understudy has been located and has been diligently rehearsing in case something like this happened.
+* Critical Success (10+) Everything went better than expected, and everyone is probably celebrating. The masons finished repairing the dam weeks ahead of schedule. Timmy has been rescued from the well. The understudy absolutely killed it at the premiere, and arguably did a better job than the original actor would have done.
 
-<!-- GETTING STARTED -->
-## Getting Started
+### Branching and Merging
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Actions do not always have a 1-to-1 correlation. One action can impact many different threads, and many different actions can impact the same thread.
 
-### Prerequisites
+In the case of the former, additional threads are created that branch off the action in question, each of which then has its own title, description, stability, danger, and can develop independently of the original thread.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+In the case of the latter, an existing thread is affected by the developments of a completely different thread, possibly altering it drastically. If several different developments would all affect the thread at the same time, the result of thread is the sum of the net changes in all the contributing actions. This can be done by adding up the result of how each thread developed. For example, say you're part of a group projectm today is the due date, and:
+1. Paula straight up didn't do her part of the project (-8)
+2. You rushed to finish your part in the hour before school started (-2)
+3. Kevin has actually been working on his part for about a week (10)
+4. Daniel gave it his best shot, but didn't quite get the idea (4)
 
-### Installation
+By adding those all together, we have 10+4-2-8=4, which is ultimately a success overall.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+## Demo
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+In this repository, threads are modelled by text files. The Title of each file briefly describes the thread. First, each file contains at the top a brief description of the current state of the thread, as well as its current Stability and Danger. Below that is a log of actions that were taken that impacted the thread, to provide traceability to how the thread got to where it is.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+The examples given in this readme and repository are going to model the events and threads shown in season 1 of Avatar: The Last Airbender. The end of the season is tagged with the current state of the story; tabletop campaigns. can do a similar thing by tagging the end of a book/adventure.
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+The current state of the files/threads is as they exist at the end of season 1. To view how the threads develop over time, look to the repository's commit history.
